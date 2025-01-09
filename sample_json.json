@@ -1,0 +1,12 @@
+{
+    "id": 2,
+    "type_point": "Burghers",
+    "location_latitude": 48.854183,
+    "location_longitude": 2.354808,
+    "map_image_url": "img/thumb_map_single_restaurant.jpg",
+    "rate": "Superb | 7.5",
+    "name_point": "Best Burghers",
+    "get_directions_start_address": "",
+    "phone": "+3934245255",
+    "url_point": "detail-restaurant.html"
+}

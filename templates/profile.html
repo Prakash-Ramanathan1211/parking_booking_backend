@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<!-- saved from url=(0059)https://www.ansonika.com/foogra/admin_section/bookings.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="Ansonika">
+    <title>FOOGRA - Admin dashboard</title>
+    <!-- Favicons-->
+    <link rel="shortcut icon" href="https://www.ansonika.com/foogra/admin_section/img/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" type="image/x-icon" href="https://www.ansonika.com/foogra/admin_section/img/apple-touch-icon-57x57-precomposed.png">
+    <link rel="apple-touch-icon" type="image/x-icon" sizes="72x72" href="https://www.ansonika.com/foogra/admin_section/img/apple-touch-icon-72x72-precomposed.png">
+    <link rel="apple-touch-icon" type="image/x-icon" sizes="114x114" href="https://www.ansonika.com/foogra/admin_section/img/apple-touch-icon-114x114-precomposed.png">
+    <link rel="apple-touch-icon" type="image/x-icon" sizes="144x144" href="https://www.ansonika.com/foogra/admin_section/img/apple-touch-icon-144x144-precomposed.png">
+    <!-- Bootstrap core CSS-->
+    <link href="./static/files/bootstrap.min.css" rel="stylesheet">
+    <!-- Main styles -->
+    <link href="./static/files/admin.css" rel="stylesheet">
+    <!-- Icon fonts-->
+    <link href="./static/files/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <!-- Plugin styles -->
+    <link href="./static/files/dataTables.bootstrap4.css" rel="stylesheet">
+    <!-- Your custom styles -->
+    <link href="./static/files/custom.css" rel="stylesheet">
+<style type="text/css">/* Chart.js */
+@-webkit-keyframes chartjs-render-animation{from{opacity:0.99}to{opacity:1}}@keyframes chartjs-render-animation{from{opacity:0.99}to{opacity:1}}.chartjs-render-monitor{-webkit-animation:chartjs-render-animation 0.001s;animation:chartjs-render-animation 0.001s;}</style></head>
+
+<body class="fixed-nav sticky-footer" id="page-top" data-new-gr-c-s-check-loaded="14.1215.0" data-gr-ext-installed="">
+    <!-- Navigation-->
+   
+    <!-- /Navigation-->
+
+        
+  
+        <div class="container-fluid">
+            
+            <!-- Breadcrumbs-->
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item">
+                    <a href="https://www.ansonika.com/foogra/admin_section/bookings.html#">Dashboard</a>
+                </li>
+                <li class="breadcrumb-item active">Bookings list</li>
+            </ol>
+
+            <div class="container margin_60_40">
+                <div class="row justify-content-center">
+                     <div class="col-lg-8">
+                         <div class="box_general write_review">
+                             <h1 class="add_bottom_15">Hey Sanjey T.S</h1>
+     
+                             <label class="d-block add_bottom_15">Overall rating</label>
+                             <!-- <div class="row">
+                                 <div class="col-md-3 add_bottom_25">
+                                    <div class="add_bottom_15">Food Quality <strong class="food_quality_val"></strong></div>
+                                    <input type="range" min="0" max="10" step="1" value="0" data-orientation="horizontal" id="food_quality" name="food_quality">
+                                 </div>
+                                 <div class="col-md-3 add_bottom_25">
+                                     <div class="add_bottom_15">Service <strong class="service_val"></strong></div>
+                                    <input type="range" min="0" max="10" step="1" value="0" data-orientation="horizontal" id="service" name="service">
+                                 </div>
+                                 <div class="col-md-3 add_bottom_25">
+                                     <div class="add_bottom_15">Location <strong class="location_val"></strong></div>
+                                    <input type="range" min="0" max="10" step="1" value="0" data-orientation="horizontal" id="location" name="location">
+                                 </div>
+                                 <div class="col-md-3 add_bottom_25">
+                                     <div class="add_bottom_15">Price <strong class="price_val"></strong></div>
+                                    <input type="range" min="0" max="10" step="1" value="0" data-orientation="horizontal" id="price" name="price">
+                                 </div>
+                             </div> -->
+                             
+                             <div class="form-group">
+                                 <label>Title of your review</label>
+                                 <input class="form-control" type="text" placeholder="If you could say it in one sentence, what would you say?">
+                             </div>
+                             <div class="form-group">
+                                 <label>Your review</label>
+                                 <textarea class="form-control" style="height: 180px;" placeholder="Write your review to help others learn about this online business"></textarea>
+                             </div>
+                             <div class="form-group">
+                                 <label>Add your photo (optional)</label>
+                                 <div class="fileupload"><input type="file" name="fileupload" accept="image/*"></div>
+                             </div>
+                             <div class="form-group">
+                                 <div class="checkboxes float-start add_bottom_15 add_top_15">
+                                     <label class="container_check">Eos tollit ancillae ea, lorem consulatu qui ne, eu eros eirmod scaevola sea. Et nec tantas accusamus salutatus, sit commodo veritus te, erat legere fabulas has ut. Rebum laudem cum ea, ius essent fuisset ut. Viderer petentium cu his.
+                                         <input type="checkbox">
+                                         <span class="checkmark"></span>
+                                     </label>
+                                 </div>
+                             </div>
+                             <a href="confirm.html" class="btn_1">Submit review</a>
+                         </div>
+                     </div>
+             </div>
+             <!-- /row -->
+             </div>
+
+
+            <div class="box_general">
+                <div class="header_box">
+                    <h2 class="d-inline-block">Bookings list</h2>
+                    <div class="filter">
+                    	<div class="styled-select short">
+	                        <select name="orderby">
+	                            <option value="Any status">Any status</option>
+	                            <option value="Approved">Approved</option>
+	                            <option value="Pending">Pending</option>
+	                            <option value="Cancelled">Cancelled</option>
+	                        </select>
+	                    </div>
+                    </div>
+                </div>
+                <div class="list_general">
+                    <ul>
+                        <li>
+                            <figure><img src="./static/files/item_1.jpg" alt=""></figure>
+                            <h4>La Monnalisa <i class="pending">Pending</i></h4>
+                            <ul class="booking_list">
+                                <li><strong>Booking date</strong> 5 November 2019</li>
+                                <li><strong>Booking details</strong> 2 People</li>
+                                <li><strong>Client</strong> Mark Twain</li>
+                            </ul>
+                            <p><a href="https://www.ansonika.com/foogra/admin_section/bookings.html#0" class="btn_1 gray"><i class="fa fa-fw fa-envelope"></i> Send Message</a></p>
+                            <ul class="buttons">
+                                <li><a href="https://www.ansonika.com/foogra/admin_section/bookings.html#0" class="btn_1 gray approve"><i class="fa fa-fw fa-check-circle-o"></i> Approve</a></li>
+                                <li><a href="https://www.ansonika.com/foogra/admin_section/bookings.html#0" class="btn_1 gray delete" data-toggle="modal" data-target="#edit_booking"><i class="fa fa-fw fa-pencil"></i> Edit</a></li>
+                                <li><a href="https://www.ansonika.com/foogra/admin_section/bookings.html#0" class="btn_1 gray delete"><i class="fa fa-fw fa-times-circle-o"></i> Cancel</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <figure><img src="./static/files/item_2.jpg" alt=""></figure>
+                            <h4>Da Alfredo <i class="cancel">Cancelled</i></h4>
+                            <ul class="booking_list">
+                                <li><strong>Booking date</strong> 11 November 2019</li>
+                                <li><strong>Booking details</strong> 2 People</li>
+                                <li><strong>Client</strong> Mark Twain</li>
+                            </ul>
+                            <p><a href="https://www.ansonika.com/foogra/admin_section/bookings.html#0" class="btn_1 gray"><i class="fa fa-fw fa-envelope"></i> Send Message</a></p>
+                            <ul class="buttons">
+                                <li><a href="https://www.ansonika.com/foogra/admin_section/bookings.html#0" class="btn_1 gray approve"><i class="fa fa-fw fa-check-circle-o"></i> Approve</a></li>
+                                <li><a href="https://www.ansonika.com/foogra/admin_section/bookings.html#0" class="btn_1 gray delete" data-toggle="modal" data-target="#edit_booking"><i class="fa fa-fw fa-pencil"></i> Edit</a></li>
+                                <li><a href="https://www.ansonika.com/foogra/admin_section/bookings.html#0" class="btn_1 gray delete"><i class="fa fa-fw fa-times-circle-o"></i> Cancel</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <figure><img src="./static/files/item_3.jpg" alt=""></figure>
+                            <h4>Sushi Gold <i class="approved">Approved</i></h4>
+                            <ul class="booking_list">
+                                <li><strong>Booking date</strong> 21 November 2019</li>
+                                <li><strong>Booking details</strong> 2 People</li>
+                                <li><strong>Client</strong> Mark Twain</li>
+                            </ul>
+                            <p><a href="https://www.ansonika.com/foogra/admin_section/bookings.html#0" class="btn_1 gray"><i class="fa fa-fw fa-envelope"></i> Send Message</a></p>
+                            <ul class="buttons">
+                                <li><a href="https://www.ansonika.com/foogra/admin_section/bookings.html#0" class="btn_1 gray approve"><i class="fa fa-fw fa-check-circle-o"></i> Approve</a></li>
+                                <li><a href="https://www.ansonika.com/foogra/admin_section/bookings.html#0" class="btn_1 gray delete" data-toggle="modal" data-target="#edit_booking"><i class="fa fa-fw fa-pencil"></i> Edit</a></li>
+                                <li><a href="https://www.ansonika.com/foogra/admin_section/bookings.html#0" class="btn_1 gray delete"><i class="fa fa-fw fa-times-circle-o"></i> Cancel</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- /box_general-->
+            <nav aria-label="...">
+                <ul class="pagination pagination-sm add_bottom_30">
+                    <li class="page-item disabled">
+                        <a class="page-link" href="https://www.ansonika.com/foogra/admin_section/bookings.html#" tabindex="-1">Previous</a>
+                    </li>
+                    <li class="page-item"><a class="page-link" href="https://www.ansonika.com/foogra/admin_section/bookings.html#">1</a></li>
+                    <li class="page-item"><a class="page-link" href="https://www.ansonika.com/foogra/admin_section/bookings.html#">2</a></li>
+                    <li class="page-item"><a class="page-link" href="https://www.ansonika.com/foogra/admin_section/bookings.html#">3</a></li>
+                    <li class="page-item">
+                        <a class="page-link" href="https://www.ansonika.com/foogra/admin_section/bookings.html#">Next</a>
+                    </li>
+                </ul>
+            </nav>
+            <!-- /pagination-->
+        </div>
+        <!-- /container-fluid-->
+
+    <!-- /container-wrapper-->
+    <footer class="sticky-footer">
+        <div class="container">
+            <div class="text-center">
+                <small>Copyright © FOOGRA 2021</small>
+            </div>
+        </div>
+    </footer>
+    <!-- Scroll to Top Button-->
+    <a class="scroll-to-top rounded" href="https://www.ansonika.com/foogra/admin_section/bookings.html#page-top">
+        <i class="fa fa-angle-up"></i>
+    </a>
+
+     <!-- Logout Modal-->
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
+                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
+                <div class="modal-footer">
+                    <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+                    <a class="btn btn-primary" href="https://www.ansonika.com/foogra/admin_section/bookings.html#0">Logout</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Edit Booking Modal -->
+    <div class="modal fade" id="edit_booking" tabindex="-1" role="dialog" aria-labelledby="edit_bookingLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="edit_bookingLabel">Edit Booking</h5>
+                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                   <div class="form-group">
+                        <label>Restaurant Name</label>
+                        <input type="text" class="form-control" value="Restaurant Name">
+                    </div>
+                    <div class="form-group">
+                        <label>Client Name</label>
+                        <input type="text" class="form-control" value="Mark Twain">
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label>Date</label>
+                                <input type="text" class="form-control" value="5 November 2020">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label>Time</label>
+                                <input type="text" class="form-control" value="08.30pm">
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /Row -->
+                   
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label>Peolple</label>
+                                <input type="text" class="form-control" value="2">
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /Row -->
+                </div>
+                <div class="modal-footer">
+                    <a class="btn btn-primary" href="https://www.ansonika.com/foogra/admin_section/login.html">Save</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap core JavaScript-->
+    <script src="./static/files/jquery.min.js.download"></script>
+    <script src="./static/files/bootstrap.bundle.min.js.download"></script>
+    <!-- Core plugin JavaScript-->
+    <script src="./static/files/jquery.easing.min.js.download"></script>
+    <!-- Page level plugin JavaScript-->
+    <script src="./static/files/Chart.min.js.download"></script>
+    <script src="./static/files/jquery.dataTables.js.download"></script>
+    <script src="./static/files/dataTables.bootstrap4.js.download"></script>
+    <script src="./static/files/jquery.magnific-popup.min.js.download"></script>
+    <!-- Custom scripts for all pages-->
+    <script src="./static/files/admin.js.download"></script>
+
+
+
+</body><grammarly-desktop-integration data-grammarly-shadow-root="true"><template shadowrootmode="open"><style>
+      div.grammarly-desktop-integration {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        white-space: nowrap;
+        border: 0;
+        -moz-user-select: none;
+        -webkit-user-select: none;
+        -ms-user-select:none;
+        user-select:none;
+      }
+
+      div.grammarly-desktop-integration:before {
+        content: attr(data-content);
+      }
+    </style><div aria-label="grammarly-integration" role="group" tabindex="-1" class="grammarly-desktop-integration" data-content="{&quot;mode&quot;:&quot;full&quot;,&quot;isActive&quot;:true,&quot;isUserDisabled&quot;:false}"></div></template></grammarly-desktop-integration></html>
