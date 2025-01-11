@@ -1,4 +1,5 @@
-var markers = [{
+var markers = [
+    {
         "id": 1,
         "type_point": "Pizza",
         "location_latitude": 48.865633,
@@ -37,7 +38,7 @@ var markers = [{
     {
         "id": 4,
         "type_point": "Japanese",
-        "location_latitude": 48.858370,
+        "location_latitude": 48.85837,
         "location_longitude": 2.294481,
         "map_image_url": "img/thumb_map_single_restaurant.jpg",
         "rate": "Superb | 7.5",
@@ -85,7 +86,7 @@ var markers = [{
     {
         "id": 8,
         "type_point": "Sushi",
-        "location_latitude": 48.862880,
+        "location_latitude": 48.86288,
         "location_longitude": 2.287205,
         "map_image_url": "img/thumb_map_single_restaurant.jpg",
         "rate": "Superb | 7.5",
@@ -116,6 +117,18 @@ var markers = [{
         "name_point": "Monnalisa",
         "get_directions_start_address": "",
         "phone": "+3934245255",
+        "url_point": "detail-restaurant.html"
+    },
+    {
+        "id": 11,
+        "type_point": "Saloon",
+        "location_latitude": 48.7549,
+        "location_longitude": 2.908764,
+        "map_image_url": "img/thumb_map_single_restaurant.jpg",
+        "rate": "Superb | 7.5",
+        "name_point": "Monikka",
+        "get_directions_start_address": "",
+        "phone": "+3934245245",
         "url_point": "detail-restaurant.html"
     }
 ];

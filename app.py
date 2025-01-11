@@ -410,5 +410,100 @@ def get_user_details():
 
     return user_details
 
+JS_FILE_PATH = "static/js/leaflet_map/leaflet_markers.js"
+
+@app.route('/admin/add')
+def admin():
+    return render_template('add_marker.html')
+
+from geopy.geocoders import Nominatim
+from geopy.exc import GeocoderTimedOut
+
+def get_lat_long(address):
+    # Initialize the geolocator
+    geolocator = Nominatim(user_agent="geoapi")
+
+    try:
+        # Get the location
+        location = geolocator.geocode(address)
+        
+        if location:
+            return location.latitude, location.longitude
+        else:
+            return None, None
+    except GeocoderTimedOut:
+        return None, None
+
+    # Example Usage
+
+@app.route('/test/loc')
+def test_loc():
+
+    loc = "10, Timsbury walk, roehampton, london"
+
+    address = "10, Timsbury walk, roehampton, london"
+    latitude, longitude = get_lat_long(address)
+
+    if latitude and longitude:
+        print(f"The latitude and longitude of the address are {latitude}, {longitude}")
+    else:
+        print("Could not retrieve the coordinates.")
+    
+    return 'noob'
+    
+
+
+@app.route('/add_marker', methods=['POST'])
+def add_marker():
+
+    # loc = "10, Timsbury walk, roehampton, london"
+
+    # address = "10, Timsbury walk, roehampton, london"
+    # latitude, longitude = get_lat_long(address)
+
+    # if latitude and longitude:
+    #     print(f"The latitude and longitude of the address are {latitude}, {longitude}")
+    # else:
+    #     print("Could not retrieve the coordinates.")
+    address = request.form.get("address")
+    latitude, longitude = get_lat_long(address)
+    new_marker = {
+        "id": int(request.form.get("id")),
+        "type_point": request.form.get("type_point"),
+        "location_latitude": float(latitude),
+        "location_longitude": float(longitude),
+        "map_image_url": request.form.get("map_image_url"),
+        "rate": request.form.get("rate"),
+        "name_point": request.form.get("name_point"),
+        "get_directions_start_address": request.form.get("get_directions_start_address", ""),
+        "phone": request.form.get("phone"),
+        "url_point": request.form.get("url_point")
+    }
+
+    try:
+        with open(JS_FILE_PATH, 'r+') as js_file:
+            content = js_file.read()
+
+            start = content.find("[")
+            end = content.rfind("]") + 1
+
+            if start == -1 or end == -1:
+                return jsonify({"success": False, "error": "Malformed JavaScript file"})
+
+            markers_data = json.loads(content[start:end])
+
+            markers_data.append(new_marker)
+
+            new_content = content[:start] + json.dumps(markers_data, indent=4) + content[end:]
+
+            js_file.seek(0)
+            js_file.write(new_content)
+            js_file.truncate()
+
+        return jsonify({"success": True, "marker": new_marker})
+
+    except Exception as e:
+        return jsonify({"success": False, "error": str(e)})
+
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5053, debug=True)     
