@@ -505,6 +505,11 @@ def add_marker():
 
     except Exception as e:
         return jsonify({"success": False, "error": str(e)})
+    
+@app.route('/add/user/bookings', methods=['GET'])
+def get_add_user_bookings():
+
+    return render_template("add_user_booking.html")
 
 @app.route('/add/user/bookings', methods=['POST'])
 def add_user_bookings():

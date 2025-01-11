@@ -314,14 +314,34 @@
 
 
 <br><br><br><br><br><br>    
-
+<script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC41bMAAfFDGBRRXUHtRs-m_qO1XwG5aV8&libraries=maps,marker&v=beta"
+      defer
+    ></script>
 
     <div class="container-fluid">
         <div class="row">
-            <div class="col-sm-6">
+            <!-- <div class="col-sm-6">
                 <div align="center">
                     <img  src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fpng.pngtree.com%2Fpng-clipart%2F20230623%2Foriginal%2Fpngtree-modern-paper-folded-map-vector-png-image_9204051.png&f=1&nofb=1&ipt=c7982573b882704e62df123365843caeb8053615df96bcddf7482bdeea5a018e&ipo=images" style="width: max-content;"/>
 
+                </div>
+            </div> -->
+            <div class="col-md-4">
+                <div class="form-group">
+                
+                <gmp-map
+                center="43.4142989,-124.2301242"
+                zoom="4"
+                map-id="DEMO_MAP_ID"
+                style="height: 400px"
+              >
+                <gmp-advanced-marker
+                  position="37.4220656,-122.0840897"
+                  title="Mountain View, CA"
+                ></gmp-advanced-marker>
+               
+              </gmp-map>
                 </div>
             </div>
             <div class="col-sm-6">
@@ -359,9 +379,9 @@
                                     </div>
               
                                     <div class="input-container ic2">
-                                        <label for="map_image_url">Map Image URL: </label>
+                                        <label for="map_image_url">Map Image: </label>
 
-                                      <input name="map_image_url" class="input" type="text"required />
+                                      <input name="map_image_url" class="input" type="file" required />
                                       <div class="cut"></div>
                                     </div>
                             </div>
@@ -918,9 +938,3 @@
         content: attr(data-content);
       }
     </style><div aria-label="grammarly-integration" role="group" tabindex="-1" class="grammarly-desktop-integration" data-content="{&quot;mode&quot;:&quot;full&quot;,&quot;isActive&quot;:true,&quot;isUserDisabled&quot;:false}"></div></template></grammarly-desktop-integration></html>
-
-
-
-   
-
-  
