@@ -1,5 +1,5 @@
 var map = L.map('map', {
-    center: [48.865633, 2.321236],
+    center: [51.510581140289595, -0.12426666298260344],
     minZoom: 2,
     zoomControl: false,
     zoom: 13
@@ -21,8 +21,8 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 
 
 var myIcon = L.icon({
-    iconUrl: 'img/pins/Marker.png',
-    iconRetinaUrl: 'img/pins/Marker.png',
+    iconUrl: '/static/img/pins/Marker.png',
+    iconRetinaUrl: '/static/img/pins/Marker.png',
     iconSize: [30, 42],
     iconAnchor: [9, 21],
     popupAnchor: [7, -15]
@@ -37,14 +37,15 @@ var markerClusters = L.markerClusterGroup({
 
 for (var i = 0; i < markers.length; ++i) {
     var popup =
-        '<img src="' + markers[i].map_image_url + '" alt=""/>' +
+        '<img src="' + markers[i].map_image_url + '" width="240px" alt=""/>' +
         '<span>' +
         '<span class="infobox_rate">' + markers[i].rate + '</span>' +
         '<em>' + markers[i].type_point + '</em>' +
         '<h3>' + markers[i].name_point + '</h3>' +
         '<a href="' + markers[i].url_point + '" class="btn_infobox_detail"></a>' +
         '<form action="https://maps.google.com/maps" method="get" target="_blank"><input name="saddr" value="' + markers[i].get_directions_start_address + '" type="hidden"><input type="hidden" name="daddr" value="' + markers[i].location_latitude + ',' + markers[i].location_longitude + '"><button type="submit" value="Get directions" class="btn_infobox_get_directions">Get directions</button></form>' +
-        '<a href="tel://' + markers[i].phone + '" class="btn_infobox_phone">' + markers[i].phone + '</a>' +
+      
+        
         '</span>';
 
 
