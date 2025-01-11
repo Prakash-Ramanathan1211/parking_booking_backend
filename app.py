@@ -255,7 +255,6 @@ def login_user(username,password):
 
     if (user_creds is None):
         return "user does not exist"
-    
 
     if (not match_password(user_creds['password'], password)):
         return "invalid password"
@@ -264,14 +263,12 @@ def login_user(username,password):
     user_name         = user_creds['firstname'] + " " + user_creds['lastname'] 
     authenticated     = 'Authentication successful'
     session['userid'] = user_creds['user_id']
-    # is_mentor          = user_creds["user_role"]
 
     sid = created_sessionid(user_id)
 
     result_dict = {
         "username" : user_name,
         "user_id" : user_id,
-        # "user_role" : is_mentor,
         "authenticated" : authenticated,
         "sid" : sid
     }
@@ -456,6 +453,8 @@ def test_loc():
 @app.route('/add_marker', methods=['POST'])
 def add_marker():
 
+    col = db["marker_details"]
+    
     # loc = "10, Timsbury walk, roehampton, london"
 
     # address = "10, Timsbury walk, roehampton, london"
@@ -479,6 +478,8 @@ def add_marker():
         "phone": request.form.get("phone"),
         "url_point": request.form.get("url_point")
     }
+
+    col.insert_one(new_marker)
 
     try:
         with open(JS_FILE_PATH, 'r+') as js_file:
@@ -504,6 +505,97 @@ def add_marker():
 
     except Exception as e:
         return jsonify({"success": False, "error": str(e)})
+
+@app.route('/add/user/bookings', methods=['POST'])
+def add_user_bookings():
+
+    col = db["spot_details"]
+
+    user_id  = request.values.get('user_id')
+    spot_id = request.values.get('spot_id')
+    booking_date = request.values.get('booking_date')
+    booking_time = request.values.get('booking_time')
+    booking_end_time = request.values.get('booking_end_time')
+    booking_status = request.values.get('booking_status')
+    booking_price = request.values.get('booking_price')
+    booking_type = request.values.get('booking_type')
+
+    booking_data = {
+        "user_id": int(user_id),
+        "spot_id": int(spot_id),
+        "booking_date": booking_date,
+        "booking_time": booking_time,
+        "booking_end_time": booking_end_time,
+        "booking_status": booking_status,
+        "booking_price": float(booking_price),
+        "booking_type": booking_type
+    }
+
+    col.insert_one(booking_data)
+
+    return "entered successfully"
+
+@app.route('/get/all/bookings', methods=['GET'])
+def get_all_user_bookings():
+
+    col = db["spot_details"]
+
+    spot_details = col.find()
+
+    spot_details_list = []
+
+    for spot in spot_details:
+
+        user_detail = db["user_details"].find_one({"user_id":int(spot["user_id"])})
+        marker_detail = db["marker_details"].find_one({"id":int(spot["spot_id"])})
+        data = {
+            "user_id" : spot["user_id"],
+            "firstname" : user_detail["firstname"],
+            "lastname" : user_detail["lastname"],
+            "spot_id"  : spot["spot_id"],
+            "name_point" : marker_detail["name_point"],
+            "booking_date" : spot["booking_date"],
+            "booking_time" : spot["booking_time"],
+            "booking_end_time" : spot["booking_end_time"],
+            "booking_status" : spot["booking_status"],
+            "booking_price" : spot["booking_price"],
+            "booking_type" : spot["booking_type"]
+        }
+
+        spot_details_list.append(data)
+    
+    return spot_details_list
+
+@app.route('/get/user/bookings/<user_id>', methods=['GET'])
+def get_user_bookings(user_id):
+
+    col = db["spot_details"]
+
+    spot_details = col.find({"user_id":int(user_id)})
+
+    spot_details_list = []
+
+    for spot in spot_details:
+
+        user_detail = db["user_details"].find_one({"user_id":int(spot["user_id"])})
+        marker_detail = db["marker_details"].find_one({"id":int(spot["spot_id"])})
+        data = {
+            "user_id" : spot["user_id"],
+            "firstname" : user_detail["firstname"],
+            "lastname" : user_detail["lastname"],
+            "spot_id"  : spot["spot_id"],
+            "name_point" : marker_detail["name_point"],
+            "booking_date" : spot["booking_date"],
+            "booking_time" : spot["booking_time"],
+            "booking_end_time" : spot["booking_end_time"],
+            "booking_status" : spot["booking_status"],
+            "booking_price" : spot["booking_price"],
+            "booking_type" : spot["booking_type"]
+        }
+
+        spot_details_list.append(data)
+    
+    return spot_details_list
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5053, debug=True)     
