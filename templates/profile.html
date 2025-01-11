@@ -14,20 +14,318 @@
     <link rel="apple-touch-icon" type="image/x-icon" sizes="114x114" href="https://www.ansonika.com/foogra/admin_section/img/apple-touch-icon-114x114-precomposed.png">
     <link rel="apple-touch-icon" type="image/x-icon" sizes="144x144" href="https://www.ansonika.com/foogra/admin_section/img/apple-touch-icon-144x144-precomposed.png">
     <!-- Bootstrap core CSS-->
-    <link href="./static/files/bootstrap.min.css" rel="stylesheet">
+    <link href="../static/files/bootstrap.min.css" rel="stylesheet">
     <!-- Main styles -->
-    <link href="./static/files/admin.css" rel="stylesheet">
+    <link href="../static/files/admin.css" rel="stylesheet">
     <!-- Icon fonts-->
-    <link href="./static/files/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="../static/files/font-awesome.min.css" rel="stylesheet" type="text/css">
     <!-- Plugin styles -->
-    <link href="./static/files/dataTables.bootstrap4.css" rel="stylesheet">
+    <link href="../static/files/dataTables.bootstrap4.css" rel="stylesheet">
     <!-- Your custom styles -->
-    <link href="./static/files/custom.css" rel="stylesheet">
+    <link href="../static/files/custom.css" rel="stylesheet">
+
+    <link href="https://cdn.prod.website-files.com/5ef38c31b69ea712667d2e24/css/justpark-career.e8afa2c5c.min.css" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin="anonymous" />
+    <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        WebFont.load({
+            google: {
+                families: ["Nunito:200,300,regular,600,700,800,900", "Nunito:200,300,regular,600,700,800,900"]
+            }
+        });
+    </script>
+    <script type="text/javascript">
+        ! function(o, c) {
+            var n = c.documentElement,
+                t = " w-mod-";
+            n.className += t + "js", ("ontouchstart" in o || o.DocumentTouch && c instanceof DocumentTouch) && (n.className += t + "touch")
+        }(window, document);
+    </script>
+    <link href="https://cdn.prod.website-files.com/5ef38c31b69ea712667d2e24/651e9cce6b576bec451bc123_justpark_favicon_webflow.png" rel="shortcut icon" type="image/x-icon" />
+    <link href="https://cdn.prod.website-files.com/5ef38c31b69ea712667d2e24/651e9d26b52db1b35c5579a8_justpark_webclip_webflow.png" rel="apple-touch-icon" />
+    <link href="https://www.justpark.com/parking/products/how-it-works" rel="canonical" />
+    <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-NYBCX7J1KG"></script>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+
+    <script type="text/javascript">
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+        gtag('set', 'developer_id.dZGVlNj', true);
+        gtag('config', 'G-NYBCX7J1KG');
+    </script>
+    <script type="text/javascript">
+        ! function(f, b, e, v, n, t, s) {
+            if (f.fbq) return;
+            n = f.fbq = function() {
+                n.callMethod ? n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+            };
+            if (!f._fbq) f._fbq = n;
+            n.push = n;
+            n.loaded = !0;
+            n.version = '2.0';
+            n.agent = 'plwebflow';
+            n.queue = [];
+            t = b.createElement(e);
+            t.async = !0;
+            t.src = v;
+            s = b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t, s)
+        }(window, document, 'script', 'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '540636262740875');
+        fbq('track', 'PageView');
+    </script>
+
+
+
+    <!-- Google Tag Manager -->
+    <script>
+        (function(w, d, s, l, i) {
+            w[l] = w[l] || [];
+            w[l].push({
+                'gtm.start': new Date().getTime(),
+                event: 'gtm.js'
+            });
+            var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s),
+                dl = l != 'dataLayer' ? '&l=' + l : '';
+            j.async = true;
+            j.src =
+                'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+            f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-T94HXRB');
+    </script>
+    <!-- End Google Tag Manager -->
+
+    <style>
+        /**************************************************
+				PRESETS
+**************************************************/
+
+        /***** SLIDER DOTS *****/
+
+        .w-slider-dot {
+            background-color: #99cca2 !important;
+            width: 10px;
+            height: 10px;
+        }
+
+        .w-slider-dot.w-active {
+            background-color: #4ba55a !important;
+        }
+
+        .c-hero__group-3-img.group-4-img {
+            left: 0%;
+        }
+
+        .c-hero__group-3-img.group-4-img.essential {
+            left: 10%;
+        }
+
+        .c-hero__group-3-img.group-4-img.commuting {
+            left: 10%;
+        }
+
+        .c-hero__group-3-img.group-4-img.airport {
+            left: 10%;
+        }
+
+        .w-webflow-badge {
+            display: none !important;
+        }
+
+        /***** MEDIA QUERIES *****/
+
+        @media(max-width: 1366px) {}
+
+        @media(max-width: 1199px) {
+            .u-w-xlarge.testimonial-slider {
+                padding-left: 30px;
+            }
+            .o-section.o-hero-section__b2b-second.media {
+                padding-bottom: 30px;
+            }
+        }
+
+        @media(max-width: 1024px) {
+            .c-nav__client-services-text {
+                margin-right: 10px;
+            }
+            .c-reviews-wrapper {
+                height: 360px;
+            }
+            .c-hero__group-3-img.group-4-img.b2c {
+                left: 0%;
+            }
+        }
+
+        @media(max-width: 991px) {
+            .c-reviews-wrapper {
+                height: 408px;
+            }
+            .o-section.o-hero-section__b2b-second.media {
+                padding-bottom: 0px;
+            }
+        }
+
+        @media(max-width: 767px) {
+            .c-reviews-wrapper {
+                height: auto;
+            }
+            .u-w-xlarge.testimonial-slider {
+                padding-left: 0px;
+            }
+        }
+
+        @media(max-width: 479px) {}
+
+        @media(max-width: 414px) {}
+
+        @media(max-width: 360px) {}
+
+        .owl-nav {
+            display: none;
+        }
+
+        .owl-dot span {
+            background: #99cca2 !important;
+            transition: opacity .4s ease !important;
+            margin: 5px 5px !important;
+        }
+
+        .owl-dot.active span,
+        .owl-dot:hover span {
+            background: #4ba55a !important;
+        }
+
+        .owl-dot,
+        .owl-dot:active,
+        .owl-dot:focus {
+            outline: 0;
+        }
+
+        .owl-stage-outer {
+            padding-bottom: 23px !important;
+        }
+
+        .owl-carousel {
+            margin-left: 0px !important;
+            ;
+            margin-right: 0px !important;
+            ;
+        }
+
+        .c-img.overview {
+            width: 150px !important;
+        }
+    </style>
+
+    <!-- TrustBox script -->
+    <script type="text/javascript" src="//widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js" async></script>
+    <!-- End TrustBox script -->
+
+    <!-- owl.carousel 2.3.4 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" integrity="sha256-UhQQ4fxEeABh4JrcmAJ1+16id/1dnlOEVCFOxDef9Lw=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" integrity="sha256-kksNxjDRxd/5+jGurZUJd1sdR2v+ClrCl3svESBaJqw=" crossorigin="anonymous" />
+
+    <link href="https://assets-global.website-files.com" rel="preconnect" crossorigin>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css" />
+    <link rel="stylesheet" href="https://fengyuanchen.github.io/datepicker/css/datepicker.css">
 <style type="text/css">/* Chart.js */
 @-webkit-keyframes chartjs-render-animation{from{opacity:0.99}to{opacity:1}}@keyframes chartjs-render-animation{from{opacity:0.99}to{opacity:1}}.chartjs-render-monitor{-webkit-animation:chartjs-render-animation 0.001s;animation:chartjs-render-animation 0.001s;}</style></head>
 
-<body class="fixed-nav sticky-footer" id="page-top" data-new-gr-c-s-check-loaded="14.1215.0" data-gr-ext-installed="">
+<body >
+    
     <!-- Navigation-->
+    <div data-animation="over-left" class="navbar_component w-nav" data-easing2="ease-in-out" data-easing="ease-in-out" data-collapse="medium" role="banner" data-no-scroll="1" data-duration="400" id="nav" style="background-color: #004aad;">
+        <div class="navbar_container">
+            <div class="navbar_toggle w-nav-button"><img src="https://cdn.prod.website-files.com/5ef38c31b69ea712667d2e24/641db1bd48906753cbe7e911_open-menu-icon.svg" loading="lazy" width="37" height="29" alt="Open menu." class="navbar_toggle-icon" /></div>
+            <div class="navbar_logo-link w-inline-block">
+                <div class="navbar_logo w-embed">
+                    <h1 style="margin-top: -1rem;color: #fff;">BookMySpot</h1>
+                </div>
+            </div>
+            <nav role="navigation" class="navbar_menu w-nav-menu">
+                <div class="navbar_link-wrapper">
+                    <div data-hover="true" data-delay="300" class="navbar_dropdown w-dropdown">
+                        <div class="navbar_dropdown-toggle w-dropdown-toggle">
+                            <div class="navbar_link is-tall" style="color: white;">About us</div>
+                            <div class="navbar_dropdown-icon is-level-1 w-embed"><svg width="100%" height="100%" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M3.86329 6.43431C4.17571 6.1219 4.68224 6.1219 4.99466 6.43431L7.96451 9.40416L10.9344 6.43431C11.2468 6.12189 11.7533 6.12189 12.0657 6.43431C12.3782 6.74673 12.3782 7.25327 12.0657 7.56569L8.67162 10.9598C8.2811 11.3503 7.64793 11.3503 7.25741 10.9598L3.86329 7.56569C3.55087 7.25327 3.55087 6.74673 3.86329 6.43431Z" fill="currentColor" />
+                </svg></div>
+                        </div>
+                        <nav class="navbar_dropdown-list w-dropdown-list">
+                            <div class="w-layout-grid navbar-dropdown_component"><a href="#aboutus" id="w-node-_49e041dc-0943-8972-a777-f9700f2b83cf-0f2b83c0" aria-current="page" class="navbar-dropdown_link is-first w-inline-block w--current"><img src="https://cdn.prod.website-files.com/5ef38c31b69ea712667d2e24/641db1626a7a4732d7ad1ce5_how-it-works-icon.svg" loading="lazy" alt="A person with crossed arms illustration." class="navbar-dropdown_icon" />
+                  <div class="content-wrapper">
+                    <div class="navbar-dropdown_title" >How it works</div>
+                    <div class="navbar-dropdown_description">Simple parking near you</div>
+                  </div>
+                </a><a href="/parking/products/monthly-parking" class="navbar-dropdown_link w-inline-block"><img src="https://cdn.prod.website-files.com/5ef38c31b69ea712667d2e24/641db19114e89808f390d6cc_mohtly-parking-icon.svg" loading="lazy" alt="A globe illustration." class="navbar-dropdown_icon" />
+                  <div class="content-wrapper">
+                    <div class="navbar-dropdown_title">Monthly parking</div>
+                    <div class="navbar-dropdown_description">Long-term solutions</div>
+                  </div>
+                </a><a href="/ev/justcharge" target="_blank" class="navbar-dropdown_link w-inline-block"><img src="https://cdn.prod.website-files.com/5ef38c31b69ea712667d2e24/641db199fcf972b1ffbda5bd_ev-icon.svg" loading="lazy" alt="A calendar illustration." class="navbar-dropdown_icon" />
+                  <div class="content-wrapper">
+                    <div class="navbar-dropdown_title">Electric vehicle charging</div>
+                    <div class="navbar-dropdown_description">EV charging made easy</div>
+                  </div>
+                </a><a href="/parking/products/cashless" class="navbar-dropdown_link is-last w-inline-block"><img src="https://cdn.prod.website-files.com/5ef38c31b69ea712667d2e24/641db1a24e79eeb08fe4bf25_on-street-icon.svg" loading="lazy" alt="Booking parking with a phone illustration." class="navbar-dropdown_icon" />
+                  <div class="content-wrapper">
+                    <div class="navbar-dropdown_title">On street parking</div>
+                    <div class="navbar-dropdown_description">Simply drive up and pay</div>
+                  </div>
+                </a>
+                                <!-- <div id="w-node-_49e041dc-0943-8972-a777-f9700f2b83eb-0f2b83c0" class="navbar-dropdown_sidebar">
+                                    <div class="navbar-dropdown_wrapper is-title">
+                                        <div class="navbar-dropdown_title is-subtitle">Popular choices</div>
+                                        <div class="navbar_dropdown-icon is-level-2 w-embed"><svg width="100%" height="100%" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M3.86329 6.43431C4.17571 6.1219 4.68224 6.1219 4.99466 6.43431L7.96451 9.40416L10.9344 6.43431C11.2468 6.12189 11.7533 6.12189 12.0657 6.43431C12.3782 6.74673 12.3782 7.25327 12.0657 7.56569L8.67162 10.9598C8.2811 11.3503 7.64793 11.3503 7.25741 10.9598L3.86329 7.56569C3.55087 7.25327 3.55087 6.74673 3.86329 6.43431Z" fill="currentColor" />
+                      </svg></div>
+                                    </div>
+                                    <div class="navbar-dropdown_wrapper is-content"><a href="/destinations/airport-parking" class="navbar_dropdown-link is-sidebar">Airport parking</a><a href="/destinations/stadium-parking" class="navbar_dropdown-link is-sidebar">Stadium parking</a><a href="/destinations/train-station-parking"
+                                            class="navbar_dropdown-link is-sidebar">Train station parking</a><a href="/destinations/city-breaks" class="navbar_dropdown-link is-sidebar">City breaks</a><a href="/destinations/office-parking" class="navbar_dropdown-link is-sidebar">Office parking</a></div>
+                                </div> -->
+                            </div>
+                        </nav>
+                    </div>
+                    <div data-hover="true" data-delay="300" class="navbar_dropdown w-dropdown">
+                        <div class="navbar_dropdown-toggle w-dropdown-toggle">
+                            <div class="navbar_link is-tall" style="color: white;">Contact us</div>
+                            <div class="navbar_dropdown-icon is-level-1 w-embed"><svg width="100%" height="100%" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M3.86329 6.43431C4.17571 6.1219 4.68224 6.1219 4.99466 6.43431L7.96451 9.40416L10.9344 6.43431C11.2468 6.12189 11.7533 6.12189 12.0657 6.43431C12.3782 6.74673 12.3782 7.25327 12.0657 7.56569L8.67162 10.9598C8.2811 11.3503 7.64793 11.3503 7.25741 10.9598L3.86329 7.56569C3.55087 7.25327 3.55087 6.74673 3.86329 6.43431Z" fill="currentColor" />
+                </svg></div>
+                        </div>
+                        <nav class="navbar_dropdown-list is-small w-dropdown-list">
+                            <div class="w-layout-grid navbar-dropdown_component is-list">
+                                <a href="https://www.justpark.com/business/overview" class="navbar-dropdown_link w-inline-block">
+                                    <div class="navbar-dropdown_title">Contact Form</div>
+                                </a>
+                                
+                            </div>
+                        </nav>
+                    </div>
+                  
+                    <div class="navbar_button-wrapper"><a href="https://www.justpark.com/dashboard" class="button-legacy is-outline w-button" style="color: white;border-color: white;">Login</a></div>
+                    <div class="navbar_button-wrapper"><a href="https://www.justpark.com/dashboard" class="button-legacy is-outline w-button" style="color: white;border-color: white;">Register</a><a href="rent_form.html" class="button-legacy w-button" style="border-color: #00bf63;color: white;background-color: #00bf63;">Rent out your parking spot</a></div>
+                    
+                </div>
+            </nav>
+            <div class="w-embed">
+                <style>
+                    .navbar_component a {
+                        text-decoration: none !important;
+                    }
+                </style>
+            </div>
+        </div>
+    </div>
    
     <!-- /Navigation-->
 
@@ -35,7 +333,28 @@
   
         <div class="container-fluid">
             
-            <!-- Breadcrumbs-->
+            <div class="row">
+                <div class="col-sm-2">
+                    <br><br><br><br>
+                    <div style="padding-left: 25px;">
+                    <p style="font-size: 20px;"><b>Your Listings</b></p>
+                    <p style="font-size: 20px;">Your Reservations</p>
+                    <p style="font-size: 20px;">Profile Settings</p>
+                    <p style="font-size: 20px;">Notification Settings</p>
+                    <p style="font-size: 20px;">Change Password</p>
+                    <p style="font-size: 20px;">Help and Support</p>
+                    <p style="font-size: 20px;">Logout</p>
+
+
+
+
+
+
+                    </div>
+                </div>
+                <div class="col-sm-10" style="background-color: whitesmoke;">
+                    <!-- Breadcrumbs-->
+            <br>
             <ol class="breadcrumb">
                 <li class="breadcrumb-item">
                     <a href="https://www.ansonika.com/foogra/admin_section/bookings.html#">Dashboard</a>
@@ -43,58 +362,6 @@
                 <li class="breadcrumb-item active">Bookings list</li>
             </ol>
 
-            <div class="container margin_60_40">
-                <div class="row justify-content-center">
-                     <div class="col-lg-8">
-                         <div class="box_general write_review">
-                             <h1 class="add_bottom_15">Hey Sanjey T.S</h1>
-     
-                             <label class="d-block add_bottom_15">Overall rating</label>
-                             <!-- <div class="row">
-                                 <div class="col-md-3 add_bottom_25">
-                                    <div class="add_bottom_15">Food Quality <strong class="food_quality_val"></strong></div>
-                                    <input type="range" min="0" max="10" step="1" value="0" data-orientation="horizontal" id="food_quality" name="food_quality">
-                                 </div>
-                                 <div class="col-md-3 add_bottom_25">
-                                     <div class="add_bottom_15">Service <strong class="service_val"></strong></div>
-                                    <input type="range" min="0" max="10" step="1" value="0" data-orientation="horizontal" id="service" name="service">
-                                 </div>
-                                 <div class="col-md-3 add_bottom_25">
-                                     <div class="add_bottom_15">Location <strong class="location_val"></strong></div>
-                                    <input type="range" min="0" max="10" step="1" value="0" data-orientation="horizontal" id="location" name="location">
-                                 </div>
-                                 <div class="col-md-3 add_bottom_25">
-                                     <div class="add_bottom_15">Price <strong class="price_val"></strong></div>
-                                    <input type="range" min="0" max="10" step="1" value="0" data-orientation="horizontal" id="price" name="price">
-                                 </div>
-                             </div> -->
-                             
-                             <div class="form-group">
-                                 <label>Title of your review</label>
-                                 <input class="form-control" type="text" placeholder="If you could say it in one sentence, what would you say?">
-                             </div>
-                             <div class="form-group">
-                                 <label>Your review</label>
-                                 <textarea class="form-control" style="height: 180px;" placeholder="Write your review to help others learn about this online business"></textarea>
-                             </div>
-                             <div class="form-group">
-                                 <label>Add your photo (optional)</label>
-                                 <div class="fileupload"><input type="file" name="fileupload" accept="image/*"></div>
-                             </div>
-                             <div class="form-group">
-                                 <div class="checkboxes float-start add_bottom_15 add_top_15">
-                                     <label class="container_check">Eos tollit ancillae ea, lorem consulatu qui ne, eu eros eirmod scaevola sea. Et nec tantas accusamus salutatus, sit commodo veritus te, erat legere fabulas has ut. Rebum laudem cum ea, ius essent fuisset ut. Viderer petentium cu his.
-                                         <input type="checkbox">
-                                         <span class="checkmark"></span>
-                                     </label>
-                                 </div>
-                             </div>
-                             <a href="confirm.html" class="btn_1">Submit review</a>
-                         </div>
-                     </div>
-             </div>
-             <!-- /row -->
-             </div>
 
 
             <div class="box_general">
@@ -114,7 +381,7 @@
                 <div class="list_general">
                     <ul>
                         <li>
-                            <figure><img src="./static/files/item_1.jpg" alt=""></figure>
+                            <figure><img src="../static/files/item_1.jpg" alt=""></figure>
                             <h4>La Monnalisa <i class="pending">Pending</i></h4>
                             <ul class="booking_list">
                                 <li><strong>Booking date</strong> 5 November 2019</li>
@@ -129,7 +396,7 @@
                             </ul>
                         </li>
                         <li>
-                            <figure><img src="./static/files/item_2.jpg" alt=""></figure>
+                            <figure><img src="../static/files/item_2.jpg" alt=""></figure>
                             <h4>Da Alfredo <i class="cancel">Cancelled</i></h4>
                             <ul class="booking_list">
                                 <li><strong>Booking date</strong> 11 November 2019</li>
@@ -144,7 +411,7 @@
                             </ul>
                         </li>
                         <li>
-                            <figure><img src="./static/files/item_3.jpg" alt=""></figure>
+                            <figure><img src="../static/files/item_3.jpg" alt=""></figure>
                             <h4>Sushi Gold <i class="approved">Approved</i></h4>
                             <ul class="booking_list">
                                 <li><strong>Booking date</strong> 21 November 2019</li>
@@ -162,54 +429,131 @@
                 </div>
             </div>
             <!-- /box_general-->
-            <nav aria-label="...">
-                <ul class="pagination pagination-sm add_bottom_30">
-                    <li class="page-item disabled">
-                        <a class="page-link" href="https://www.ansonika.com/foogra/admin_section/bookings.html#" tabindex="-1">Previous</a>
-                    </li>
-                    <li class="page-item"><a class="page-link" href="https://www.ansonika.com/foogra/admin_section/bookings.html#">1</a></li>
-                    <li class="page-item"><a class="page-link" href="https://www.ansonika.com/foogra/admin_section/bookings.html#">2</a></li>
-                    <li class="page-item"><a class="page-link" href="https://www.ansonika.com/foogra/admin_section/bookings.html#">3</a></li>
-                    <li class="page-item">
-                        <a class="page-link" href="https://www.ansonika.com/foogra/admin_section/bookings.html#">Next</a>
-                    </li>
-                </ul>
-            </nav>
+                </div>
+
+            </div>
+            
+            
             <!-- /pagination-->
         </div>
         <!-- /container-fluid-->
 
     <!-- /container-wrapper-->
-    <footer class="sticky-footer">
-        <div class="container">
-            <div class="text-center">
-                <small>Copyright © FOOGRA 2021</small>
-            </div>
-        </div>
-    </footer>
-    <!-- Scroll to Top Button-->
-    <a class="scroll-to-top rounded" href="https://www.ansonika.com/foogra/admin_section/bookings.html#page-top">
-        <i class="fa fa-angle-up"></i>
-    </a>
+    <footer class="footer-ev-copy">
+        <div class="page-padding-ev">
+            <div class="container" style="max-width: 100%;">
+                <br><br>
+                <div align="center">
+                    <h1 style="color: white;">BookMySpot</h1>
 
-     <!-- Logout Modal-->
-    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
-                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">×</span>
-                    </button>
                 </div>
-                <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
-                <div class="modal-footer">
-                    <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-                    <a class="btn btn-primary" href="https://www.ansonika.com/foogra/admin_section/bookings.html#0">Logout</a>
+                <div class="padding-top padding-large">
+                    <div class="padding-bottom padding-medium">
+                        <div class="w-layout-grid footer_top-wrapper">
+                            <a href="/" class="footer_logo-link w-nav-brand" ></a>
+                               
+                            
+                            <div class="footer_right-wrapper">
+                                <div class="footer_link-list">
+                                    <div class="footer_link-list-header">
+                                        <div class="text-color-white text-weight-bold">About us</div>
+                                        <div class="footer_link-list-icon w-embed"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" fill="currentColor">
+                        <path d="M4.251 181.1C7.392 177.7 11.69 175.1 16 175.1c3.891 0 7.781 1.406 10.86 4.25l197.1 181.1l197.1-181.1c6.5-6 16.64-5.625 22.61 .9062c6 6.5 5.594 16.59-.8906 22.59l-208 192c-6.156 5.688-15.56 5.688-21.72 0l-208-192C-1.343 197.7-1.749 187.6 4.251 181.1z" />
+                      </svg></div>
+                                    </div>
+                                    <div class="footer_links"><a href="https://www.justpark.com/company/overview" class="footer_link">About us</a>
+                                        </div>
+                                </div>
+                                <div class="footer_link-list">
+                                    <div class="footer_link-list-header">
+                                        <div class="text-color-white text-weight-bold">Contact us</div>
+                                        <div class="footer_link-list-icon w-embed"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" fill="currentColor">
+                        <path d="M4.251 181.1C7.392 177.7 11.69 175.1 16 175.1c3.891 0 7.781 1.406 10.86 4.25l197.1 181.1l197.1-181.1c6.5-6 16.64-5.625 22.61 .9062c6 6.5 5.594 16.59-.8906 22.59l-208 192c-6.156 5.688-15.56 5.688-21.72 0l-208-192C-1.343 197.7-1.749 187.6 4.251 181.1z" />
+                      </svg></div>
+                                    </div>
+                                    <div class="footer_links">
+                                          <a href="/ev/justcharge" class="footer_link">Form</a></div>
+                                </div>
+                                <div class="footer_link-list">
+                                    <div class="footer_link-list-header">
+                                        <div class="text-color-white text-weight-bold">Privacy Policies</div>
+                                        <div class="footer_link-list-icon w-embed"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" fill="currentColor">
+                        <path d="M4.251 181.1C7.392 177.7 11.69 175.1 16 175.1c3.891 0 7.781 1.406 10.86 4.25l197.1 181.1l197.1-181.1c6.5-6 16.64-5.625 22.61 .9062c6 6.5 5.594 16.59-.8906 22.59l-208 192c-6.156 5.688-15.56 5.688-21.72 0l-208-192C-1.343 197.7-1.749 187.6 4.251 181.1z" />
+                      </svg></div>
+                                    </div>
+                                    <div class="footer_links"><a href="https://www.justpark.com/uk/national-rail-parking/" class="footer_link">Station parking</a></div>
+                                </div>
+                         
+                            </div>
+                        </div>
+                    </div>
+                    <div id="w-node-_901ffe6c-8089-dbe1-49e9-788259902466-59902421" class="footer_external-wrapper">
+                        <div class="margin-top margin-medium">
+                            <div class="footer_social-list">
+                                <div class="footer-social-text show-mobile-landscape">Follow us on</div>
+                                <div class="footer_social-component">
+                                    <a rel="noopener" title="Instagram" href="https://www.instagram.com/justparkhq" target="_blank" class="footer_social-link w-inline-block">
+                                        <div class="social-icon-ev w-embed"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" fill="CurrentColor">
+                        <path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z" />
+                      </svg></div>
+                                    </a>
+                                    <a rel="noopener" title="Facebook" href="https://www.facebook.com/JustParkHQ/" target="_blank" class="footer_social-link w-inline-block">
+                                        <div class="social-icon-ev w-embed"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="CurrentColor">
+                        <path d="M504 256C504 119 393 8 256 8S8 119 8 256c0 123.78 90.69 226.38 209.25 245V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.28c-30.8 0-40.41 19.12-40.41 38.73V256h68.78l-11 71.69h-57.78V501C413.31 482.38 504 379.78 504 256z" />
+                      </svg></div>
+                                    </a>
+                                    <a rel="noopener" title="Twitter" href="https://twitter.com/JustPark" target="_blank" class="footer_social-link w-inline-block">
+                                        <div class="social-icon-ev w-embed"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="CurrentColor">
+                        <path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z" />
+                      </svg></div>
+                                    </a>
+                                    <a rel="noopener" title="LinkedIn" href="https://www.linkedin.com/company/justpark/" target="_blank" class="footer_social-link w-inline-block">
+                                        <div class="social-icon-ev w-embed"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" fill="CurrentColor">
+                        <path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z" />
+                      </svg></div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    
+                    </div>
+                    <div class="padding-top padding-medium">
+                   
+                    </div>
+                    <div class="line-divider"></div>
+                    <div class="padding-top padding-medium">
+                        <div class="footer_bottom-wrapper">
+                            <div id="w-node-_901ffe6c-8089-dbe1-49e9-788259902480-59902421" class="footer_legal-text">© Copyright BookMySpot 2024</div>
+                            <br>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
+        <div class="footer_scripts w-embed w-script">
+            <script>
+                var Webflow = Webflow || [];
+
+                Webflow.push(function() {
+                    let headerSelector = '.footer_link-list-header';
+                    let listSelector = '.footer_links';
+                    let iconSelector = '.footer_link-list-icon';
+
+                    $(headerSelector).on('click', function() {
+                        let list = $(this).next();
+                        let icon = $(this).find(iconSelector).first();
+
+                        list.slideToggle(200);
+                        icon.toggleClass('rotate-180');
+
+                        $(listSelector).not(list).slideUp('fast');
+                        $(iconSelector).not(icon).removeClass('rotate-180');
+                    });
+                });
+            </script>
+        </div>
+    
+    </footer>  
     
     <!-- Edit Booking Modal -->
     <div class="modal fade" id="edit_booking" tabindex="-1" role="dialog" aria-labelledby="edit_bookingLabel" aria-hidden="true">
@@ -264,17 +608,17 @@
     </div>
 
     <!-- Bootstrap core JavaScript-->
-    <script src="./static/files/jquery.min.js.download"></script>
-    <script src="./static/files/bootstrap.bundle.min.js.download"></script>
+    <script src="../static/files/jquery.min.js.download"></script>
+    <script src="../static/files/bootstrap.bundle.min.js.download"></script>
     <!-- Core plugin JavaScript-->
-    <script src="./static/files/jquery.easing.min.js.download"></script>
+    <script src="../static/files/jquery.easing.min.js.download"></script>
     <!-- Page level plugin JavaScript-->
-    <script src="./static/files/Chart.min.js.download"></script>
-    <script src="./static/files/jquery.dataTables.js.download"></script>
-    <script src="./static/files/dataTables.bootstrap4.js.download"></script>
-    <script src="./static/files/jquery.magnific-popup.min.js.download"></script>
+    <script src="../static/files/Chart.min.js.download"></script>
+    <script src="../static/files/jquery.dataTables.js.download"></script>
+    <script src="../static/files/dataTables.bootstrap4.js.download"></script>
+    <script src="../static/files/jquery.magnific-popup.min.js.download"></script>
     <!-- Custom scripts for all pages-->
-    <script src="./static/files/admin.js.download"></script>
+    <script src="../static/files/admin.js.download"></script>
 
 
 
@@ -298,4 +642,6 @@
       div.grammarly-desktop-integration:before {
         content: attr(data-content);
       }
-    </style><div aria-label="grammarly-integration" role="group" tabindex="-1" class="grammarly-desktop-integration" data-content="{&quot;mode&quot;:&quot;full&quot;,&quot;isActive&quot;:true,&quot;isUserDisabled&quot;:false}"></div></template></grammarly-desktop-integration></html>
+    </style>
+    
+    <div aria-label="grammarly-integration" role="group" tabindex="-1" class="grammarly-desktop-integration" data-content="{&quot;mode&quot;:&quot;full&quot;,&quot;isActive&quot;:true,&quot;isUserDisabled&quot;:false}"></div></template></grammarly-desktop-integration></html>

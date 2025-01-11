@@ -22,7 +22,9 @@
   <link href="{{ url_for('static', filename='files/dataTables.bootstrap4.css') }}" rel="stylesheet">
   <link href="{{ url_for('static', filename='files/dropzone.css') }}" rel="stylesheet">
   <link href="{{ url_for('static', filename='files/custom.css') }}" rel="stylesheet">
-
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
   <link href="https://cdn.prod.website-files.com/5ef38c31b69ea712667d2e24/css/justpark-career.e8afa2c5c.min.css" rel="stylesheet" type="text/css" />
   <link href="https://fonts.googleapis.com" rel="preconnect" />
   <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin="anonymous" />
@@ -112,7 +114,7 @@
   box-sizing: border-box;
   height: auto;
   padding: 20px;
-  width: 750px;
+  width: 100%;
 }
 
 .title {
@@ -138,11 +140,11 @@
 }
 
 .ic1 {
-  margin-top: 30px;
+  margin-top: 50px;
 }
 
 .ic2 {
-  margin-top: 30px;
+  margin-top: 50px;
 }
 
 .input {
@@ -213,7 +215,7 @@
   cursor: pointer;
   font-size: 18px;
   height: 50px;
-  margin-top: 38px;
+  margin-top: 48px;
   outline: 0;
   text-align: center;
   width: 100%;
@@ -222,8 +224,21 @@
 .submit:active {
   background-color: #06b;
 }
+
+h1,h2,h3,h4{
+    font-family: "League Spartan", serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+}
+
+label,button{
+    font-family: "Poppins", serif;
+  font-weight: 400;
+  font-style: normal;
+}
 </style>
-<body class="fixed-nav sticky-footer" id="page-top" data-new-gr-c-s-check-loaded="14.1215.0" data-gr-ext-installed="" style="background-color: whitesmoke;">
+<body class="fixed-nav sticky-footer" id="page-top" data-new-gr-c-s-check-loaded="14.1215.0" data-gr-ext-installed="" style="background-image: url('/static/img/bg.jpg');background-size: 100% 100%;background-repeat: no-repeat;background-attachment: fixed;">
 
     <div data-animation="over-left" class="navbar_component w-nav" data-easing2="ease-in-out" data-easing="ease-in-out" data-collapse="medium" role="banner" data-no-scroll="1" data-duration="400" id="nav" style="background-color: #004aad;margin-top: -5rem;">
     <div class="navbar_container">
@@ -313,13 +328,13 @@
 
 
 
-<br><br><br><br><br><br>    
+<br><br><br><br><br> 
 <script
       src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC41bMAAfFDGBRRXUHtRs-m_qO1XwG5aV8&libraries=maps,marker&v=beta"
       defer
     ></script>
 
-    <div class="container-fluid">
+    <div class="container" style="background-color: #ffffff;border-radius: 25px;margin-bottom: 10.5px;">
         <div class="row">
             <!-- <div class="col-sm-6">
                 <div align="center">
@@ -327,108 +342,139 @@
 
                 </div>
             </div> -->
-            <div class="col-md-4">
-                <div class="form-group">
+            <div class="col-sm-6" >
+                <br><br><br>
+                <h1 align="center">Choose Your Location</h1>
+                <br><br><br>
+                <div class="form-group" style="max-width: 100%;" >
+                <div style="margin-left: 1rem;">
+                    <gmp-map
+                    center="51.50272123213164, -0.13727861563719235"
+                    zoom="14"
+                    map-id="DEMO_MAP_ID"
+                    style="height: 400px"
+                  >
+                    <gmp-advanced-marker
+                      position="51.50272123213164, -0.13727861563719235"
+                      title="Mountain View, CA"
+                    ></gmp-advanced-marker>
+                   
+                  </gmp-map>
+                   
                 
-                <gmp-map
-                center="43.4142989,-124.2301242"
-                zoom="4"
-                map-id="DEMO_MAP_ID"
-                style="height: 400px"
-              >
-                <gmp-advanced-marker
-                  position="37.4220656,-122.0840897"
-                  title="Mountain View, CA"
-                ></gmp-advanced-marker>
-               
-              </gmp-map>
+                </div>
+           
                 </div>
             </div>
+            
+           
             <div class="col-sm-6">
 
 
                 <form class="form" id="addMarkerForm">
               
-                        <div class="title" style="padding-left: 20px;">Add Marker</div>
-                        <div class="subtitle"  style="padding-left: 20px;">Let's create your Marker</div>
+                    <br><br>
+                        <h1 style="padding-left: 20px;">Upload Your Spot</h1>
+                        <h4 class="subtitle"  style="padding-left: 20px;">Update Your Details</h4>
                   
 
                     <div class="container-fluid">
                         <div class="row">
                             <div class="col-sm-6">
 
-                                <div class="input-container ic1">
-                                    <label for="id" >ID:</label>
-
-                                    <input name="id" class="input" type="text" required/>
-                                    <div class="cut"></div>
-                                  </div>
-                                  <div class="input-container ic2">
-                                    <label for="type_point">Type:</label>
-
-                                    <input name="type_point" class="input" type="text" required/>
-                                    <div class="cut"></div>
-                                  </div>
-              
-              
-                                  <div class="input-container ic2">
+                                <div class="input-container ic2">
                                     <label for="address" >Address: </label>
 
                                       <input name="address" class="input" type="text" required/>
                                       <div class="cut"></div>
                                     </div>
-              
-                                    <div class="input-container ic2">
-                                        <label for="map_image_url">Map Image: </label>
 
-                                      <input name="map_image_url" class="input" type="file" required />
-                                      <div class="cut"></div>
-                                    </div>
+                                <div class="input-container ic1">
+                                    <label for="id" >Size:</label>
+
+                                    <select class="input" name="id" required >
+                                        <option value="Small">Small</option>
+                                        <option value="Medium">Medium</option>
+                                        <option value="Large">Large</option>
+                                        <option value="Van and Mini Bus">Van and Mini Bus</option>
+                                    </select>
+                                   
+                                    <div class="cut"></div>
+                                  </div>
+                                  <div class="input-container ic2">
+                                    <label for="type_point">Availability:</label>
+
+                                    <input name="type_point" class="input" type="date" required/>
+                                    <div class="cut"></div>
+                                  </div>
+              
+              
+                                
+              
                             </div>
                             <div class="col-sm-6">
                     
                                 <div class="input-container ic2">
-                                    <label for="name_point">Name: </label>
+                                    <label for="name_point">Post Code: </label>
 
                                     <input name="name_point" class="input" type="text" required/>
                                     <div class="cut"></div>
                                   </div>
 
-                                <div class="input-container ic2">
-                                    <label for="get_directions_start_address">Directions Start Address: </label>
-
-                                    <input name="get_directions_start_address" class="input" type="text" required/>
-                                    <div class="cut"></div>
-                                  </div>
+                                  <div class="input-container ic2" >
+                                    <label for="rate">Price per Hour:</label>
             
-                                  <div class="input-container ic2">
-                                    <label for="phone">Phone: </label>
-
-                                    <input name="phone" class="input" type="text" required/>
+                                    <input name="rate" class="input" type="text" required />
                                     <div class="cut"></div>
                                   </div>
+
+                                  
+                                  <div class="input-container ic2">
+                                    <label for="map_image_url">Parking Spot Images: </label>
+
+                                  <input name="map_image_url" class="input" type="file" required style="padding-top: 9px;"/>
+                                 
+                                </div>
             
-                                  <div class="input-container ic2">
-                                    <label for="url_point">URL:  </label>
-
-                                    <input name="url_point" class="input" type="text" required/>
-                                    <div class="cut"></div>
-                                  </div>
+                                  
                             </div>
+
+                            
 
                         </div>
                     </div>
                    
+                   
+                    
+                     
+                    <div class="input-container ic2" style="padding-left: 15px;">
+                        <label for="get_directions_start_address">Features: </label>
+                        <br>
+                        <div class="row" >
+                            <div class="col-sm-6">
+                                <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
+                                <label for="vehicle1"> Covered Parking</label><br>
+                                <input type="checkbox" id="vehicle2" name="vehicle2" value="Car">
+                                <label for="vehicle2"> CCTV</label><br>
+                                <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat">
+                                <label for="vehicle3"> Electric Parking</label><br><br>
+                            </div>
+                            <div class="col-sm-6">
+                                <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
+                                <label for="vehicle1"> Disabled Access</label><br>
+                                <input type="checkbox" id="vehicle2" name="vehicle2" value="Car">
+                                <label for="vehicle2"> On-site Staff</label><br>
+                                <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat">
+                                <label for="vehicle3"> Kerb Parking</label><br><br>
+                            </div>
 
-                    <div class="input-container ic2" style="padding: 0px 13px 0px 13px;">
-                        <label for="rate">Rate: </label>
-
-                        <input name="rate" class="input" type="text" required />
+                        </div>
+                       
+                      
                         <div class="cut"></div>
                       </div>
-                     
-
-                    <button type="text" class="submit">submit</button>
+                      <br><br>
+                    <button type="text" class="submit">Submit</button>
                 </form>
 
              <br><br><br>
@@ -440,7 +486,7 @@
 
     </div>
     
-    
+    <br><br><br>
    
 
     
