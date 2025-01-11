@@ -16,16 +16,12 @@
   <link rel="apple-touch-icon" type="image/x-icon" sizes="144x144" href="https://www.ansonika.com/foogra/admin_section/img/apple-touch-icon-144x144-precomposed.png">
 	
   <!-- Bootstrap core CSS-->
-  <link href="./static/files/bootstrap.min.css" rel="stylesheet">
-  <!-- Main styles -->
-  <link href="./static/files/admin.css" rel="stylesheet">
-  <!-- Icon fonts-->
-  <link href="./static/files/font-awesome.min.css" rel="stylesheet" type="text/css">
-  <!-- Plugin styles -->
-  <link href="./static/files/dataTables.bootstrap4.css" rel="stylesheet">
-  <link href="./static/files/dropzone.css" rel="stylesheet">
-  <!-- Your custom styles -->
-  <link href="./static/files/custom.css" rel="stylesheet">
+  <link href="{{ url_for('static', filename='files/bootstrap.min.css') }}" rel="stylesheet">
+  <link href="{{ url_for('static', filename='files/admin.css') }}" rel="stylesheet">
+  <link href="{{ url_for('static', filename='files/font-awesome.min.css') }}" rel="stylesheet">
+  <link href="{{ url_for('static', filename='files/dataTables.bootstrap4.css') }}" rel="stylesheet">
+  <link href="{{ url_for('static', filename='files/dropzone.css') }}" rel="stylesheet">
+  <link href="{{ url_for('static', filename='files/custom.css') }}" rel="stylesheet">
 
   <link href="https://cdn.prod.website-files.com/5ef38c31b69ea712667d2e24/css/justpark-career.e8afa2c5c.min.css" rel="stylesheet" type="text/css" />
   <link href="https://fonts.googleapis.com" rel="preconnect" />
@@ -342,53 +338,61 @@
                             <div class="col-sm-6">
 
                                 <div class="input-container ic1">
-                                    <input name="id" class="input" type="text" placeholder=" " required/>
+                                    <label for="id" >ID:</label>
+
+                                    <input name="id" class="input" type="text" required/>
                                     <div class="cut"></div>
-                                    <label for="firstname" class="placeholder">ID:</label>
                                   </div>
                                   <div class="input-container ic2">
-                                    <input name="type_point" class="input" type="text" placeholder=" " required/>
+                                    <label for="type_point">Type:</label>
+
+                                    <input name="type_point" class="input" type="text" required/>
                                     <div class="cut"></div>
-                                    <label for="lastname" class="placeholder">Type:</label>
                                   </div>
               
               
                                   <div class="input-container ic2">
-                                      <input name="address" class="input" type="text" placeholder=" " required/>
+                                    <label for="address" >Address: </label>
+
+                                      <input name="address" class="input" type="text" required/>
                                       <div class="cut"></div>
-                                      <label for="lastname" class="placeholder">Address: </label>
                                     </div>
               
                                     <div class="input-container ic2">
-                                      <input name="map_image_url" class="input" type="text" placeholder=" "required />
+                                        <label for="map_image_url">Map Image URL: </label>
+
+                                      <input name="map_image_url" class="input" type="text"required />
                                       <div class="cut"></div>
-                                      <label for="lastname" class="placeholder">Map Image URL: </label>
                                     </div>
                             </div>
                             <div class="col-sm-6">
                     
                                 <div class="input-container ic2">
-                                    <input name="name_point" class="input" type="text" placeholder=" " required/>
+                                    <label for="name_point">Name: </label>
+
+                                    <input name="name_point" class="input" type="text" required/>
                                     <div class="cut"></div>
-                                    <label for="lastname" class="placeholder">Name: </label>
                                   </div>
 
                                 <div class="input-container ic2">
-                                    <input name="get_directions_start_address" class="input" type="text" placeholder=" " required/>
+                                    <label for="get_directions_start_address">Directions Start Address: </label>
+
+                                    <input name="get_directions_start_address" class="input" type="text" required/>
                                     <div class="cut"></div>
-                                    <label for="lastname" class="placeholder">Directions Start Address: </label>
                                   </div>
             
                                   <div class="input-container ic2">
-                                    <input name="phone" class="input" type="text" placeholder=" " required/>
+                                    <label for="phone">Phone: </label>
+
+                                    <input name="phone" class="input" type="text" required/>
                                     <div class="cut"></div>
-                                    <label for="lastname" class="placeholder">Phone: </label>
                                   </div>
             
                                   <div class="input-container ic2">
-                                    <input name="url_point" class="input" type="text" placeholder=" " required/>
+                                    <label for="url_point">URL:  </label>
+
+                                    <input name="url_point" class="input" type="text" required/>
                                     <div class="cut"></div>
-                                    <label for="lastname" class="placeholder">URL:  </label>
                                   </div>
                             </div>
 
@@ -397,9 +401,10 @@
                    
 
                     <div class="input-container ic2" style="padding: 0px 13px 0px 13px;">
-                        <input name="rate" class="input" type="text" placeholder=" " required />
+                        <label for="rate">Rate: </label>
+
+                        <input name="rate" class="input" type="text" required />
                         <div class="cut"></div>
-                        <label for="lastname" class="placeholder">Rate: </label>
                       </div>
                      
 
@@ -881,22 +886,15 @@
 </script>
     <!-- Scroll to Top Button-->
 
-    
-    <!-- Bootstrap core JavaScript-->
-    <script src="./static/files/jquery.min.js.download"></script>
-    <script src="./static/files/bootstrap.bundle.min.js.download"></script>
-    <!-- Core plugin JavaScript-->
-    <script src="./static/files/jquery.easing.min.js.download"></script>
-    <!-- Page level plugin JavaScript-->
-    <script src="./static/files/Chart.min.js.download"></script>
-    <script src="./static/files/jquery.dataTables.js.download"></script>
-    <script src="./static/files/dataTables.bootstrap4.js.download"></script>
-	<script src="./static/files/jquery.magnific-popup.min.js.download"></script>
-    <!-- Custom scripts for all pages-->
-    <script src="./static/files/admin.js.download"></script>
-	<!-- Custom scripts for this page-->
-	<script src="./static/files/dropzone.min.js.download"></script>
-	
+    <script src="{{ url_for('static', filename='files/query.min.js.download') }}"></script>
+    <script src="{{ url_for('static', filename='files/bootstrap.bundle.min.js.download') }}"></script>
+    <script src="{{ url_for('static', filename='files/jquery.easing.min.js.download') }}"></script>
+    <script src="{{ url_for('static', filename='files/Chart.min.js.download') }}"></script>
+    <script src="{{ url_for('static', filename='files/jquery.dataTables.js.download') }}"></script>
+    <script src="{{ url_for('static', filename='files/dataTables.bootstrap4.js.download') }}"></script>
+    <script src="{{ url_for('static', filename='files/jquery.magnific-popup.min.js.download') }}"></script>
+    <script src="{{ url_for('static', filename='files/admin.js.download') }}"></script>
+    <script src="{{ url_for('static', filename='files/dropzone.min.js.download') }}"></script>	
 
 
 <input type="file" multiple="multiple" class="dz-hidden-input" style="visibility: hidden; position: absolute; top: 0px; left: 0px; height: 0px; width: 0px;"></body><grammarly-desktop-integration data-grammarly-shadow-root="true"><template shadowrootmode="open"><style>
